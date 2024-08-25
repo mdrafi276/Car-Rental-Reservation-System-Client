@@ -18,7 +18,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        bannerBg: "url('./src/assets/images/banner-bg.jpg')",
+        bannerBg: "url('./src/assets/banner.jpg')",
       },
       colors: {
         second: "#262626",

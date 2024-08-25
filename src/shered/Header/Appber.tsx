@@ -1,12 +1,17 @@
 import { Link, NavLink } from "react-router-dom";
-import MobileMenu from "./MobileMenu";
-import { Button } from "@/components/ui/button";
+
+
 import { routes } from "@/utils/route";
 import Logo from "./Logo/Logo";
+import Headroom from "react-headroom";
+import MobileMenu from "./MobileMenu";
+
+
 
 const Appber = () => {
     return (
-      <div className="bg-second">
+     <Headroom>
+       <div className="bg-black">
       <div className="max-w-screen-xl min-h-20 mx-auto flex items-center justify-between px-3 ">
         {/* Logo */}
         <Link to="/">
@@ -22,8 +27,8 @@ const Appber = () => {
             <NavLink
               key={route.path}
               className={({ isActive }) =>
-                `font-medium text-gray-100 hover:text-orange-500 uppercase ${
-                  isActive && "text-orange-500"
+                `font-medium text-gray-100 hover:text-[#e80a0a]  ${
+                  isActive && "text-[#e80a0a]"
                 }`
               }
               to={route.path}
@@ -31,14 +36,19 @@ const Appber = () => {
               {route.name}
             </NavLink>
           ))}
-          <Link to="/login">
-            <Button className="text-gray-100 bg-orange-500 hover:bg-orange-600">
-              LOGIN
-            </Button>
-          </Link>
+          <NavLink to="/login" className={({ isActive }) =>
+                `font-medium text-gray-100 hover:text-[#e80a0a]  ${
+                  isActive && "text-[#e80a0a]"
+                }`
+              }>
+            
+              Login
+       
+          </NavLink>
         </div>
       </div>
     </div>
+     </Headroom>
     );
 };
 
