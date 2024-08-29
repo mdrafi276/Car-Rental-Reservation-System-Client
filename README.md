@@ -9,7 +9,7 @@ CarX is a user-friendly and responsive car rental reservation platform that allo
 
 ##  Project Description
 
-CarX is a comprehensive car rental reservation system designed to provide a seamless and user-friendly experience for both customers and administrators. This platform allows customers to browse a wide selection of available cars, make reservations, and manage their bookings. Administrators have the ability to manage car inventory, oversee bookings, and handle user accounts efficiently.
+CarX is a comprehensive car rental reservation system designed to provide a seamless and user-friendly experience for both customers and administrators. For administrators, Gearshift offers a powerful dashboard to manage car inventories, handle bookings, and oversee customer accounts. The system includes tools for adding, updating, or removing vehicle listings, processing payments, and generating reports on key metrics such as revenue and car usage. The platform is built with a focus on security, efficiency, and user experience, ensuring a seamless and professional service for all users. This platform allows customers to browse a wide selection of available cars, make reservations, and manage their bookings. Administrators have the ability to manage car inventory, oversee bookings, and handle user accounts efficiently.
 
 
 ## Features
