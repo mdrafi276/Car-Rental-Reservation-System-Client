@@ -1,50 +1,101 @@
-# React + TypeScript + Vite
+# CarX - Car Rental Reservation System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🤖 Introduction
 
-Currently, two official plugins are available:
+CarX is a user-friendly and responsive car rental reservation platform that allows customers to browse, book, and manage cars while providing administrators with tools to manage inventory and reservations.
+## 🔗 Live URL
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[car x click me](https://car-rental-reservation-client-six.vercel.app)
 
-## Expanding the ESLint configuration
+##  Project Description
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+CarX is a comprehensive car rental reservation system designed to provide a seamless and user-friendly experience for both customers and administrators. This platform allows customers to browse a wide selection of available cars, make reservations, and manage their bookings. Administrators have the ability to manage car inventory, oversee bookings, and handle user accounts efficiently.
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Features
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 1. Responsive Design
+- Fully responsive design ensuring a seamless experience across all devices (desktop, tablet, mobile).
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### 2. User-Friendly Interface
+- Intuitive navigation and layout for easy browsing, booking, and account management.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### 3. Advanced Car Search
+- Search functionality with filters for car type, features, price range, and availability.
+
+### 4. Booking Management
+- Users can view, modify, or cancel their bookings through a personalized dashboard.
+- Restriction on booking modifications after approval for security and reliability.
+
+### 5. Admin Dashboard
+- Manage car inventory, bookings, and user accounts from a secure admin interface.
+- Options to add, update, or delete car listings and approve/cancel bookings.
+
+### 6. Payment Integration
+- Secure payment gateway integration allowing users to make payments after returning a car.
+- Support for multiple payment methods, including local payment gateways like AmarPay and SSLCommerz.
+
+
+### 8. Error Handling & Notifications
+- Friendly error pages for 404 and other server-side issues.
+- Clear error messages and navigational options to guide users back to functional pages.
+
+### 9. User Authentication
+- Secure Sign Up and Sign In pages with real-time validation and error handling.
+- Password recovery options for users who forget their login details.
+
+### 10. Customer Testimonials
+- Display customer reviews and ratings on the homepage to build trust and credibility.
+
+## 🤸 Installation Guideline
+
+Follow these steps to set up the project locally on your machine.
+
+### 📚 Prerequisites
+
+Make sure you have the following installed on your machine:
+
+- 🖥️ [**Node.js**](https://nodejs.org/en) installed on your machine (v18 or
+  higher recommended)
+- ✏️ A code editor like [**VSCode**](https://code.visualstudio.com/)
+- ✅ [**TypeScript**](https://www.typescriptlang.org/) installed
+- ✅ [**npm**](https://www.npmjs.com/) installed
+
+### 🛠️ Installation Steps
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/mdrafi276/car-renter.reservation-system-client.git
+   cd Campers-Shop-client
+   ```
+
+2. **Install the project dependencies using npm:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables:**
+
+   Create a new file named .env in the root of your project and add the
+   following content:
+
+   ```bash
+   VITE_IMAGEBB_API_KEY=your_secret
+   ```
+
+4. **Start the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+## Configuration
+
+Create a .env file in the root directory of the project and add the following
+configuration variables:
+
+```bash
+VITE_IMAGEBB_API_KEY=your_secret
 ```
