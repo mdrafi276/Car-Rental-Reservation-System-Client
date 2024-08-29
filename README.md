@@ -46,6 +46,34 @@ CarX is a comprehensive car rental reservation system designed to provide a seam
 
 ### 10. Customer Testimonials
 - Display customer reviews and ratings on the homepage to build trust and credibility.
+## ⚙️ Technology Stack
+
+-  **Front-End:**
+
+  - [React](https://react.dev/)
+  - [Redux](https://redux-toolkit.js.org/)
+  - [TypeScript](https://www.typescriptlang.org/)
+  - [React Router](https://reactrouter.com/en/main)
+  - [Tailwind CSS](https://tailwindcss.com/)
+  - [Fremer motion](https://www.framer.com/motion/)
+
+-  **Backend:**
+
+  - [Node.js](https://nodejs.org/en/)
+  - [Express](https://expressjs.com/)
+  - [TypeScript](https://www.typescriptlang.org/)
+  - [MongoDB](https://www.mongodb.com/)
+  - [Mongoose](https://mongoosejs.com/)
+  - [JWT (JSON Web Token)](https://www.npmjs.com/package/jsonwebtoken)
+  - [dotenv](https://www.npmjs.com/package/dotenv)
+
+- **Development Tools:**
+
+  - [VS Code](https://code.visualstudio.com/)
+  - [Postman (API testing)](https://www.postman.com/)
+  - [ts-node-dev](https://www.npmjs.com/package/ts-node-dev)
+  - [Vite](https://vitejs.dev/)
+
 
 ## 🤸 Installation Guideline
 
