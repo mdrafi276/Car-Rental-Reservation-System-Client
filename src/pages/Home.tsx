@@ -9,6 +9,7 @@ const Home = () => {
             <HeroSection/>
             <WhyChooseUs/>
             <Testimonial/>
+            
         </div>
     );
 };
