@@ -60,6 +60,7 @@ const SignUp = () => {
       role: animal
 
     };
+    
 
     const res = await signUp(userData);
 
