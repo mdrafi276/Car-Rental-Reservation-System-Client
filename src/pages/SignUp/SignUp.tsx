@@ -6,16 +6,9 @@ import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 
 import { IoEye, IoEyeOff } from "react-icons/io5";
-import Logo from "@/shered/Header/Logo/Logo";
+// import Logo from "@/shered/Header/Logo/Logo";
+import Select from "react-tailwindcss-select";
 
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { toast } from "sonner";
 import { useSignUpMutation } from "@/redux/features/auth/authApi";
 
@@ -28,12 +21,24 @@ type Inputs = {
   role: string;
   terms: boolean;
 };
+const options = [
+  { value: "user", label: "User" },
+  { value: "admin", label: "Admin" },
+  
+];
+
 const SignUp = () => {
   const [signUp, { isLoading }] = useSignUpMutation();
   const [isShowPassword, setIsShowPassword] = useState(false);
   const [isConfirmShowPassword, setIsConfirmShowPassword] = useState(false);
 
   const navigate = useNavigate();
+  const [animal, setAnimal] = useState(null);
+
+  const handleChange = value => {
+      // console.log("value:", value);
+      setAnimal(value);
+  };
 
   const {
     register,
@@ -45,13 +50,15 @@ const SignUp = () => {
     if (data.password !== data.confirmPassword) {
       return toast.error("Password and Confirm Password does not match");
     }
+    console.log(animal);
 
     const userData = {
       name: data.name,
       email: data.email,
       password: data.password,
       phone: data.phone,
-      role: data.role,
+      role: animal
+
     };
 
     const res = await signUp(userData);
@@ -75,7 +82,7 @@ const SignUp = () => {
         </h2>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="space-y-4 border-2 border-red-500 w-full "
+          className="space-y-4  w-full "
         >
           <div className="">
             <div className="grid w-full items-center gap-1.5">
@@ -201,19 +208,15 @@ const SignUp = () => {
             <Controller
               name="role"
               control={control}
-              rules={{ required: "Role is required" }}
+             
               render={({ field }) => (
-                <Select onValueChange={field.onChange} value={field.value}>
-                  <SelectTrigger className="md:w-full py-1 md:py-2 px-1 bg-white border border-gray-200  text-white  focus-visible:ring-offset-0">
-                    <SelectValue placeholder="Select a Role" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectGroup>
-                      <SelectItem value="user">User</SelectItem>
-                      <SelectItem value="admin">Admin</SelectItem>
-                    </SelectGroup>
-                  </SelectContent>
-                </Select>
+                <Select
+               
+                primaryColor={"purple"}
+                value={animal}
+                onChange={handleChange}
+                options={options}
+            />
               )}
             />
             {errors?.role && (
